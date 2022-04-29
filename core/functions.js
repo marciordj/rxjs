@@ -18,6 +18,14 @@ function searchExtension(array, extension = 'srt') {
   return array.filter(element => element.endsWith(extension))
 }
 
+function removeEmptySpace(array) {
+  return array.filter(element => element.trim())
+}
+
+function removeArrow(string) {
+  return string.filter(element => !element.includes('-->'))
+}
+
 
 //Aqui ele vai pegar o path até o arquivo e abrir ou rejeitar
 function readFile(filePath) {
@@ -39,5 +47,7 @@ function readFiles(filesPath) {
 module.exports = {
   readDirectory,
   readFiles,
-  searchExtension
+  searchExtension,
+  removeEmptySpace,
+  removeArrow
 }
