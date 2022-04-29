@@ -22,7 +22,7 @@ function removeEmptySpace(array) {
   return array.filter(element => element.trim())
 }
 
-function removeArrow(string) {
+function removeLinesWithArrow(string) {
   return string.filter(element => !element.includes('-->'))
 }
 
@@ -49,5 +49,5 @@ module.exports = {
   readFiles,
   searchExtension,
   removeEmptySpace,
-  removeArrow
+  removeLinesWithArrow
 }
