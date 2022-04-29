@@ -22,8 +22,8 @@ function removeEmptySpace(array) {
   return array.filter(element => element.trim())
 }
 
-function removeLinesWithArrow(string) {
-  return string.filter(element => !element.includes('-->'))
+function removeLinesWithArrow(string, stringPattern) {
+  return string.filter(element => !element.includes(stringPattern))
 }
 
 
