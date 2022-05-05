@@ -26,6 +26,11 @@ function removeLinesWithArrow(string, stringPattern) {
   return string.filter(element => !element.includes(stringPattern))
 }
 
+function removeNumber(string) {
+const regex = /[0-9]/gi
+return string.filter(element => !regex.exec(element))
+}
+
 
 //Aqui ele vai pegar o path até o arquivo e abrir ou rejeitar
 function readFile(filePath) {
@@ -49,5 +54,6 @@ module.exports = {
   readFiles,
   searchExtension,
   removeEmptySpace,
-  removeLinesWithArrow
+  removeLinesWithArrow,
+  removeNumber
 }
